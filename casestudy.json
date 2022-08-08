@@ -1,0 +1,877 @@
+{
+  "model": {
+    "deploymentDiagram": {
+      "allElements": {
+        "allNodes": {
+          "1": {
+            "redundancyGroup": null,
+            "states": [
+              {
+                "stateName": "UP",
+                "isDefaultState": true,
+                "isLocked": false,
+                "isStateDOWN": false
+              },
+              {
+                "stateName": "DOWN",
+                "isDefaultState": false,
+                "isLocked": true,
+                "isStateDOWN": true
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "to": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "transitionName": "Failure",
+                "rate": 1.0E-6,
+                "isLocked": false
+              },
+              {
+                "from": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "to": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "transitionName": "Restart",
+                "rate": 0.5,
+                "isLocked": false
+              }
+            ],
+            "stateOperations": [],
+            "name": "DC Server",
+            "objectInfo": {
+              "objectID": 1
+            },
+            "type": "DeploymentTarget",
+            "parentId": null,
+            "objectId": 1
+          },
+          "2": {
+            "name": "LoadController",
+            "objectInfo": {
+              "objectID": 2
+            },
+            "type": "Artifact",
+            "parentId": 1,
+            "objectId": 2
+          },
+          "18": {
+            "redundancyGroup": null,
+            "states": [
+              {
+                "stateName": "UP",
+                "isDefaultState": true,
+                "isLocked": false,
+                "isStateDOWN": false
+              },
+              {
+                "stateName": "DOWN",
+                "isDefaultState": false,
+                "isLocked": true,
+                "isStateDOWN": true
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "to": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "transitionName": "Failure",
+                "rate": 1.0E-6,
+                "isLocked": false
+              },
+              {
+                "from": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "to": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "transitionName": "Restart",
+                "rate": 0.5,
+                "isLocked": false
+              }
+            ],
+            "stateOperations": [],
+            "name": "WeatherService",
+            "objectInfo": {
+              "objectID": 18
+            },
+            "type": "DeploymentTarget",
+            "parentId": null,
+            "objectId": 18
+          },
+          "3": {
+            "redundancyGroup": null,
+            "states": [
+              {
+                "stateName": "UP",
+                "isDefaultState": true,
+                "isLocked": false,
+                "isStateDOWN": false
+              },
+              {
+                "stateName": "DOWN",
+                "isDefaultState": false,
+                "isLocked": true,
+                "isStateDOWN": true
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "to": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "transitionName": "Failure",
+                "rate": 1.0E-6,
+                "isLocked": false
+              },
+              {
+                "from": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "to": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "transitionName": "Restart",
+                "rate": 0.5,
+                "isLocked": false
+              }
+            ],
+            "stateOperations": [],
+            "name": "DatabaseWM",
+            "objectInfo": {
+              "objectID": 3
+            },
+            "type": "DeploymentTarget",
+            "parentId": 1,
+            "objectId": 3
+          },
+          "4": {
+            "name": "PostgresDB",
+            "objectInfo": {
+              "objectID": 4
+            },
+            "type": "Artifact",
+            "parentId": 3,
+            "objectId": 4
+          },
+          "20": {
+            "redundancyGroup": null,
+            "states": [
+              {
+                "stateName": "UP",
+                "isDefaultState": true,
+                "isLocked": false,
+                "isStateDOWN": false
+              },
+              {
+                "stateName": "DOWN",
+                "isDefaultState": false,
+                "isLocked": true,
+                "isStateDOWN": true
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "to": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "transitionName": "Failure",
+                "rate": 1.0E-6,
+                "isLocked": false
+              },
+              {
+                "from": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "to": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "transitionName": "Restart",
+                "rate": 0.5,
+                "isLocked": false
+              }
+            ],
+            "stateOperations": [],
+            "name": "DataConcentrator",
+            "objectInfo": {
+              "objectID": 20
+            },
+            "type": "DeploymentTarget",
+            "parentId": null,
+            "objectId": 20
+          },
+          "22": {
+            "redundancyGroup": null,
+            "states": [
+              {
+                "stateName": "UP",
+                "isDefaultState": true,
+                "isLocked": false,
+                "isStateDOWN": false
+              },
+              {
+                "stateName": "DOWN",
+                "isDefaultState": false,
+                "isLocked": true,
+                "isStateDOWN": true
+              },
+              {
+                "stateName": "SAFE_MODE",
+                "isDefaultState": false,
+                "isLocked": false,
+                "isStateDOWN": false
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "to": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "transitionName": "Failure",
+                "rate": 1.0E-4,
+                "isLocked": false
+              },
+              {
+                "from": {
+                  "stateName": "DOWN",
+                  "isDefaultState": false,
+                  "isLocked": true,
+                  "isStateDOWN": true
+                },
+                "to": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "transitionName": "Restart",
+                "rate": 0.5,
+                "isLocked": false
+              },
+              {
+                "from": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "to": {
+                  "stateName": "SAFE_MODE",
+                  "isDefaultState": false,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "transitionName": "MemoryOverflow",
+                "rate": 0.001,
+                "isLocked": false
+              }
+            ],
+            "stateOperations": [
+              {
+                "state": {
+                  "stateName": "SAFE_MODE",
+                  "isDefaultState": false,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "operationEntries": [
+                  {
+                    "operationType": {
+                      "name": "ReadData"
+                    },
+                    "speedLimit": -1
+                  }
+                ]
+              },
+              {
+                "state": {
+                  "stateName": "UP",
+                  "isDefaultState": true,
+                  "isLocked": false,
+                  "isStateDOWN": false
+                },
+                "operationEntries": [
+                  {
+                    "operationType": {
+                      "name": "WriteData"
+                    },
+                    "speedLimit": -1
+                  },
+                  {
+                    "operationType": {
+                      "name": "ReadData"
+                    },
+                    "speedLimit": -1
+                  }
+                ]
+              }
+            ],
+            "name": "Smart Meter",
+            "objectInfo": {
+              "objectID": 22
+            },
+            "type": "DeploymentTarget",
+            "parentId": null,
+            "objectId": 22
+          }
+        },
+        "allConnections": {
+          "19": {
+            "linkType": [
+              {
+                "name": "Default",
+                "rate": 1.0
+              }
+            ],
+            "linkFailures": [],
+            "objectInfo": {
+              "objectID": 19
+            },
+            "firstDtId": 18,
+            "secondDtId": 1
+          },
+          "21": {
+            "linkType": [
+              {
+                "name": "Default",
+                "rate": 1.0
+              }
+            ],
+            "linkFailures": [],
+            "objectInfo": {
+              "objectID": 21
+            },
+            "firstDtId": 20,
+            "secondDtId": 1
+          },
+          "23": {
+            "linkType": [
+              {
+                "name": "Default",
+                "rate": 1.0
+              }
+            ],
+            "linkFailures": [],
+            "objectInfo": {
+              "objectID": 23
+            },
+            "firstDtId": 20,
+            "secondDtId": 22
+          }
+        }
+      },
+      "allLinkTypes": [
+        {
+          "name": "Default",
+          "rate": 1.0
+        }
+      ],
+      "operationTypes": [
+        {
+          "name": "WriteData"
+        },
+        {
+          "name": "ReadData"
+        }
+      ],
+      "redundancyGroups": []
+    },
+    "sequenceDiagram": {
+      "allElements": {
+        "allNodes": {
+          "24": {
+            "activations": {
+              "30": {
+                "objectInfo": {
+                  "objectID": 30
+                }
+              }
+            },
+            "objectInfo": {
+              "objectID": 24
+            },
+            "artifactId": 1
+          },
+          "26": {
+            "activations": {
+              "31": {
+                "objectInfo": {
+                  "objectID": 31
+                }
+              }
+            },
+            "objectInfo": {
+              "objectID": 26
+            },
+            "artifactId": 18
+          },
+          "27": {
+            "activations": {
+              "34": {
+                "objectInfo": {
+                  "objectID": 34
+                }
+              }
+            },
+            "objectInfo": {
+              "objectID": 27
+            },
+            "artifactId": 3
+          },
+          "28": {
+            "activations": {
+              "37": {
+                "objectInfo": {
+                  "objectID": 37
+                }
+              }
+            },
+            "objectInfo": {
+              "objectID": 28
+            },
+            "artifactId": 20
+          },
+          "29": {
+            "activations": {
+              "38": {
+                "objectInfo": {
+                  "objectID": 38
+                }
+              }
+            },
+            "objectInfo": {
+              "objectID": 29
+            },
+            "artifactId": 22
+          }
+        },
+        "allConnections": {
+          "32": {
+            "order": 0,
+            "name": "getWeatherData()",
+            "executionTime": [
+              {
+                "executionTime": 1
+              }
+            ],
+            "messageSize": [
+              {
+                "messageSize": 1
+              }
+            ],
+            "messageFailures": [
+              {
+                "causeHWfail": false,
+                "failureName": "InvalidDataError",
+                "rate": 0.001
+              }
+            ],
+            "operationTypeList": [],
+            "objectInfo": {
+              "objectID": 32
+            },
+            "fromActivationId": 30,
+            "toActivationId": 31
+          },
+          "35": {
+            "order": 1,
+            "name": "getHistoricalData()",
+            "executionTime": [
+              {
+                "executionTime": 1
+              }
+            ],
+            "messageSize": [],
+            "messageFailures": [],
+            "operationTypeList": [],
+            "objectInfo": {
+              "objectID": 35
+            },
+            "fromActivationId": 30,
+            "toActivationId": 34
+          },
+          "36": {
+            "order": 2,
+            "name": "computeTOUs()",
+            "executionTime": [
+              {
+                "executionTime": 1
+              }
+            ],
+            "messageSize": [],
+            "messageFailures": [],
+            "operationTypeList": [],
+            "objectInfo": {
+              "objectID": 36
+            },
+            "fromActivationId": 30,
+            "toActivationId": 30
+          },
+          "39": {
+            "order": 3,
+            "name": "sendTOUs()",
+            "executionTime": [
+              {
+                "executionTime": 1
+              }
+            ],
+            "messageSize": [
+              {
+                "messageSize": 1
+              }
+            ],
+            "messageFailures": [],
+            "operationTypeList": [],
+            "objectInfo": {
+              "objectID": 39
+            },
+            "fromActivationId": 30,
+            "toActivationId": 37
+          },
+          "40": {
+            "order": 4,
+            "name": "uploadTOU()",
+            "executionTime": [
+              {
+                "executionTime": 1
+              }
+            ],
+            "messageSize": [
+              {
+                "messageSize": 1
+              }
+            ],
+            "messageFailures": [
+              {
+                "causeHWfail": false,
+                "failureName": "WritingError",
+                "rate": 1.0E-4
+              }
+            ],
+            "operationTypeList": [
+              {
+                "name": "WriteData"
+              }
+            ],
+            "objectInfo": {
+              "objectID": 40
+            },
+            "fromActivationId": 37,
+            "toActivationId": 38
+          }
+        }
+      },
+      "loops": {}
+    }
+  },
+  "view": {
+    "deploymentDiagramView": {
+      "allElements": {
+        "allNodes": {
+          "1": {
+            "objectId": 1,
+            "width": 410.0,
+            "height": 250.0,
+            "x": 530.0,
+            "y": 150.0
+          },
+          "2": {
+            "objectId": 2,
+            "width": 150.0,
+            "height": 150.0,
+            "x": 20.0,
+            "y": 60.0
+          },
+          "18": {
+            "objectId": 18,
+            "width": 150.0,
+            "height": 150.0,
+            "x": 140.0,
+            "y": 190.0
+          },
+          "3": {
+            "objectId": 3,
+            "width": 190.0,
+            "height": 200.0,
+            "x": 200.0,
+            "y": 30.0
+          },
+          "4": {
+            "objectId": 4,
+            "width": 150.0,
+            "height": 150.0,
+            "x": 20.0,
+            "y": 30.0
+          },
+          "20": {
+            "objectId": 20,
+            "width": 150.0,
+            "height": 150.0,
+            "x": 1100.0,
+            "y": 190.0
+          },
+          "22": {
+            "objectId": 22,
+            "width": 150.0,
+            "height": 150.0,
+            "x": 1400.0,
+            "y": 190.0
+          }
+        },
+        "allConnections": {
+          "19": {
+            "objectId": 19,
+            "fromSlot": {
+              "x": 150.0,
+              "y": 56.0
+            },
+            "toSlot": {
+              "x": 0.0,
+              "y": 97.0
+            }
+          },
+          "21": {
+            "objectId": 21,
+            "fromSlot": {
+              "x": 0.0,
+              "y": 54.0
+            },
+            "toSlot": {
+              "x": 410.0,
+              "y": 96.0
+            }
+          },
+          "23": {
+            "objectId": 23,
+            "fromSlot": {
+              "x": 150.0,
+              "y": 59.0
+            },
+            "toSlot": {
+              "x": 0.0,
+              "y": 59.0
+            }
+          }
+        }
+      }
+    },
+    "sequenceDiagramView": {
+      "allElements": {
+        "allNodes": {
+          "24": {
+            "objectId": 24,
+            "width": 150.0,
+            "height": 40.0,
+            "x": 150.0,
+            "y": 30.0,
+            "ActivationViews": [
+              {
+                "objectId": 30,
+                "width": 10.0,
+                "height": 337.0,
+                "x": 70.0,
+                "y": 70.0
+              }
+            ]
+          },
+          "26": {
+            "objectId": 26,
+            "width": 150.0,
+            "height": 40.0,
+            "x": 340.0,
+            "y": 30.0,
+            "ActivationViews": [
+              {
+                "objectId": 31,
+                "width": 10.0,
+                "height": 69.0,
+                "x": 70.0,
+                "y": 70.0
+              }
+            ]
+          },
+          "27": {
+            "objectId": 27,
+            "width": 150.0,
+            "height": 40.0,
+            "x": 540.0,
+            "y": 30.0,
+            "ActivationViews": [
+              {
+                "objectId": 34,
+                "width": 10.0,
+                "height": 150.0,
+                "x": 70.0,
+                "y": 71.0
+              }
+            ]
+          },
+          "28": {
+            "objectId": 28,
+            "width": 150.0,
+            "height": 40.0,
+            "x": 770.0,
+            "y": 30.0,
+            "ActivationViews": [
+              {
+                "objectId": 37,
+                "width": 10.0,
+                "height": 255.0,
+                "x": 70.0,
+                "y": 140.0
+              }
+            ]
+          },
+          "29": {
+            "objectId": 29,
+            "width": 150.0,
+            "height": 40.0,
+            "x": 1100.0,
+            "y": 30.0,
+            "ActivationViews": [
+              {
+                "objectId": 38,
+                "width": 10.0,
+                "height": 224.0,
+                "x": 70.0,
+                "y": 170.0
+              }
+            ]
+          }
+        },
+        "allConnections": {
+          "32": {
+            "objectId": 32,
+            "fromSlot": {
+              "x": 10.0,
+              "y": 21.0
+            },
+            "toSlot": {
+              "x": 0.0,
+              "y": 21.0
+            }
+          },
+          "35": {
+            "objectId": 35,
+            "fromSlot": {
+              "x": 10.0,
+              "y": 111.0
+            },
+            "toSlot": {
+              "x": 0.0,
+              "y": 110.0
+            }
+          },
+          "36": {
+            "objectId": 36,
+            "fromSlot": {
+              "x": 10.0,
+              "y": 188.0
+            },
+            "toSlot": {
+              "x": 10.0,
+              "y": 188.0
+            }
+          },
+          "39": {
+            "objectId": 39,
+            "fromSlot": {
+              "x": 10.0,
+              "y": 258.0
+            },
+            "toSlot": {
+              "x": 0.0,
+              "y": 188.0
+            }
+          },
+          "40": {
+            "objectId": 40,
+            "fromSlot": {
+              "x": 10.0,
+              "y": 235.0
+            },
+            "toSlot": {
+              "x": 0.0,
+              "y": 205.0
+            }
+          }
+        }
+      },
+      "loopViews": {}
+    }
+  }
+}
